@@ -1,0 +1,8 @@
+<h3>ユーザー名  <%= @user.name %></h3>
+<p>メールアドレス: <%= @user.email %></p>
+<p>ユーザー画像: 
+<% if @user.image && @user.image.url %>
+<%= image_tag @user.image.url, width: '100' %>
+<% end %></p>
+
+<%= link_to "一覧画面にもどる", picture_posts_path %>
