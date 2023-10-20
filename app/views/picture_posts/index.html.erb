@@ -6,7 +6,7 @@
     <th>ユーザー名</th>
   </tr>
 
-<% @picture_post.each do |post| %>
+<% @picture_posts.each do |post| %>
   <tr>
     <td><%= post.content %></td>
     <td><% if post.image && post.image.url %>

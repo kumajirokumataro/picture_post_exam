@@ -1,10 +1,10 @@
-<%= form_with(model: @post, local: true ,url: choose_new_or_edit ) do |form| %>
-  <% if @post.errors.any? %>
+<%= form_with(model: @picture_post, local: true ,url: choose_new_or_edit ) do |form| %>
+  <% if @picture_post.errors.any? %>
     <div id="error_explanation">
-      <h2><%= @post.errors.count %>件のエラーがあります。</h2>
+      <h2><%= @picture_post.errors.count %>件のエラーがあります。</h2>
       <ul>
 
-      <% @post.errors.full_messages.each do |msg| %>
+      <% @picture_post.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
@@ -12,7 +12,7 @@
   <% end %>
   <div class="post_content">
     <%= form.text_field :content %>
-    <%= image_tag(@post.image.url) if @post.image && @post.image.url %>
+    <%= image_tag(@picture_post.image.url) if @picture_post.image && @picture_post.image.url %>
     <%= form.file_field :image %>
     <%= form.hidden_field :image_cache %>
 
@@ -20,4 +20,4 @@
   <%= form.submit %>
 <% end %>
 
-<%= link_to "一覧画面にもどる", posts_path %>
+<%= link_to "一覧画面にもどる", picture_posts_path %>
