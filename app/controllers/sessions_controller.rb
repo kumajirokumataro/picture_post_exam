@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  skip_before_action :login_required, only: [:new, :create]
+  #skip_before_action :login_required, only: [:new, :create]
   #showもonly: [:new, :create, :show]というように追加するかも
   def new
   end

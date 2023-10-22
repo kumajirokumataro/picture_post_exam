@@ -14,9 +14,11 @@
         <% end %>
     <td><%= post.user.name %></td>
 
-    <td><%= link_to '詳細を確認する', picture_post_path(picture_post.id), class: "btn btn-primary" %></td>
-    <td><%= link_to "編集する", edit_picture_post_path(picture_post.id), class: "btn btn-success " %></td>
-    <td><%= link_to '削除する', picture_post_path(picture_post.id), class: "btn btn-warning", method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td>
+    <td><%= link_to '詳細を確認する', picture_post_path(post.id), class: "btn btn-primary" %></td>
+    <% if post.user_id == current_user.id %>
+      <td><%= link_to "編集する", edit_picture_post_path(post.id), class: "btn btn-success " %></td>
+      <td><%= link_to '削除する', picture_post_path(post.id), class: "btn btn-warning", method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>
