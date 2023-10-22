@@ -5,4 +5,6 @@
 <%= image_tag @user.image.url, width: '100' %>
 <% end %></p>
 
+
+<%= link_to "ユーザー情報を編集する", edit_user_path(@user.id) %>
 <%= link_to "一覧画面にもどる", picture_posts_path %>
