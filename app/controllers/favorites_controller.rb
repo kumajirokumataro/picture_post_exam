@@ -1,7 +1,8 @@
 class FavoritesController < ApplicationController
   
   def index
-    # @my_favorites = 
+    #user = User.find(params[:id])
+    @my_favorites = current_user.favorites.all 
   end
   
 
