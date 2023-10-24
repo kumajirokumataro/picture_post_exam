@@ -17,6 +17,9 @@ gem 'pry-rails'
 gem 'dotenv-rails'
 gem 'faker'
 gem 'rexml'
+gem 'net-smtp'
+gem 'net-imap'
+gem 'net-pop'
 
 
 
