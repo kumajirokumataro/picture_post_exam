@@ -22,6 +22,7 @@ class PicturePostsController < ApplicationController
       render :new
     else 
       if @picture_post.save
+        ContactMailer.contact_mail(@picture_post).deliver
         redirect_to new_picture_post_path, notice: "投稿を作成しました！"
       else
         render :new

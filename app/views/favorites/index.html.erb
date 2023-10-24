@@ -12,7 +12,7 @@
     <td><% if favorite.picture_post.image && favorite.picture_post.image.url %>
         <%= link_to(image_tag favorite.picture_post.image.url, width: '100') %></td>
         <% end %>
-    <td><%= favorite.favorite_post_pictures.user.name %></td>
+    <td><%= favorite.picture_post.user.name %></td>
   </tr>
 <% end %>
 </table>

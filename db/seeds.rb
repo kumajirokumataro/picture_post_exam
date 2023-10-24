@@ -9,9 +9,6 @@
 50.times do |n|
   name = Faker::Games::Pokemon.name
   email = Faker::Internet.email
-  password_digest = "password"
-  User.create!(name: name,
-               email: email,
-               password_digest: password,
-               )
+  password = "password"
+  User.create!(name: name,email: email,password: password)
 end
